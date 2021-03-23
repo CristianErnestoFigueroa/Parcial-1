@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="EMPLEADOModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Tbl_empleado">
+    <Key>
+      <PropertyRef Name="Id_empleado" />
+    </Key>
+    <Property Name="Id_empleado" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Empl_nombre" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_apellido" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_DUI" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_direccion" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_tel" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="Empl_cargo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="EMPLEADOEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Tbl_empleado" EntityType="Self.Tbl_empleado" />
+  </EntityContainer>
+</Schema>
